@@ -1,0 +1,6 @@
+# Ignorar archivos de compilación y binarios
+bin/
+*.class
+# Otros archivos temporales
+*.log
+*.tmp
