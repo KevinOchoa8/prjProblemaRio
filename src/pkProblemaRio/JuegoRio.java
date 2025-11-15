@@ -22,6 +22,19 @@ public class JuegoRio {
     public void iniciarJuego() {
         System.out.println("¡Bienvenido al juego del río!");
         System.out.println("Debes cruzar el río con los personajes sin que se coman entre sí.");
+        System.out.println("\nINSTRUCCIONES:");
+        System.out.println("- El vikingo puede cruzar solo o acompañado de un personaje.");
+        System.out.println("- Cuando el vikingo regrese solo, escribe 'ninguno' cuando se te pregunte a quién llevar.");
+        System.out.println("- Para ganar, debes lograr que el lobo, caperucita, uvas y el vikingo estén todos en la orilla derecha.");
+        System.out.println("\nEjemplo de secuencia ganadora:");
+        System.out.println("1. Lleva a Caperucita a la derecha");
+        System.out.println("2. El vikingo regresa solo (escribe 'ninguno')");
+        System.out.println("3. Lleva al lobo a la derecha");
+        System.out.println("4. Regresa con Caperucita a la izquierda");
+        System.out.println("5. Lleva las uvas a la derecha");
+        System.out.println("6. El vikingo regresa solo (escribe 'ninguno')");
+        System.out.println("7. Lleva a Caperucita a la derecha");
+        System.out.println("\n¡Sigue estos pasos y ganarás el juego!");
         while (true) {
             mostrarEstado();
             if (verificarFin()) break;
@@ -45,7 +58,11 @@ public class JuegoRio {
     }
 
     private void turno() {
-        System.out.println("\n¿A quién quieres llevar con el vikingo? (lobo/caperucita/uvas/ninguno)");
+        if (!vikingoIzq) {
+            System.out.println("\n¿Con quién quieres regresar al lado izquierdo? (vikingo/lobo/caperucita/uvas/ninguno)");
+        } else {
+            System.out.println("\n¿A quién quieres llevar con el vikingo? (lobo/caperucita/uvas/ninguno)");
+        }
         String eleccion = scanner.nextLine().trim().toLowerCase();
         boolean personajeMovido = false;
         if (vikingoIzq) {
@@ -89,9 +106,9 @@ public class JuegoRio {
     }
 
     private boolean verificarFin() {
-        // Si Caperucita está en la orilla derecha, gana el juego
-        if (!caperucitaIzq) {
-            System.out.println("¡Ganaste! Caperucita cruzó el río.");
+        // Victoria solo si lobo, caperucita, uvas y vikingo están en la orilla derecha
+        if (!loboIzq && !caperucitaIzq && !uvaIzq && !vikingoIzq) {
+            System.out.println("¡Felicidades! Todos los personajes y el vikingo han cruzado el río correctamente. ¡Eres el ganador!");
             return true;
         }
         return false;
