@@ -28,7 +28,7 @@
                 <mxCell id="6" value="Verificar el peligro de que si el lobo se come a caperucita o caparucita come la uvas" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="14">
                     <mxGeometry x="215" y="140" width="170" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="En el turno va a seleccionar para remar y llevar algun actor al otro lado del rio" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="14">
+                <mxCell id="5" value="&amp;nbsp;Seleccionar un actor para remar y llevarlo al otro lado del rio en el turno" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="14">
                     <mxGeometry x="65" y="50" width="150" height="80" as="geometry"/>
                 </mxCell>
             </root>
