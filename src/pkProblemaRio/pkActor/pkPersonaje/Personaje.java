@@ -1,4 +1,4 @@
-package pkProblemaRio.Actor.Personaje;
+package pkProblemaRio.pkActor.pkPersonaje;
 
 public abstract class Personaje {
     private String nombre;

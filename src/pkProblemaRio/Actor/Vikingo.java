@@ -1,9 +1,9 @@
-package pkProblemaRio.Actor.Personaje;
+package pkProblemaRio.Actor;
 
-public abstract class Personaje {
+public class Vikingo {
     private String nombre;
 
-    public Personaje(String nombre) {
+    public Vikingo(String nombre) {
         this.nombre = nombre;
     }
 
